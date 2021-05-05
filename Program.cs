@@ -13,12 +13,13 @@ namespace bronzetti.christian._4h.SaveRecord
            
             // scrivere la list in file.bin
             c.Save();
-             Console.WriteLine($"Ho scritto {c.Count} comuni");
+
+            Console.WriteLine($"Ecco la riga 1000 dopo il dave\n{c[5]}\n");
 
             //rileggere il file binario in una list<Comune>
             c.Load();
-            Console.WriteLine($"Ho letto {c.Count} comuni");
-            
+
+            Console.WriteLine($"Ecco la riga 1000 dopo load \n{c[5]}\n");
             Console.WriteLine(c.RicercaComune(Convert.ToInt32(100)));
         }
     }
